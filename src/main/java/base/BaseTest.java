@@ -11,7 +11,7 @@ import java.time.Duration;
 
 public class BaseTest
 {
-    protected WebDriver driver;
+    protected static WebDriver driver;
 
 
     @BeforeMethod
@@ -27,6 +27,10 @@ public class BaseTest
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
         driver.get("https://www.demoblaze.com/index.html ");
     }
+
+    public static WebDriver getDriver() {
+    return driver;
+}
 
     @AfterMethod
     public void tearDown()

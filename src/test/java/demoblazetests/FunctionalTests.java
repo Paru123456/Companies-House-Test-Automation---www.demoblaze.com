@@ -3,10 +3,16 @@ import base.BaseTest;
 import com.Demoblaze.Pages.CartPage;
 import com.Demoblaze.Pages.HomePage;
 import com.Demoblaze.Pages.ProductPage;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
+import utils.TestListener;
 import utils.WaitUtils;
+
+@Listeners(TestListener.class) // Automatically tracks test execution and screenshots
 
 public class FunctionalTests extends BaseTest {
 
